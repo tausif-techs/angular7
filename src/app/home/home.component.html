@@ -1,0 +1,42 @@
+<div class="container">
+  	<div class="row">
+	    <div class="col-md-6">
+			<form action="/action_page.php">
+			  <div class="form-group">
+			    <label for="name">First Name:</label>
+			    <input type="name" class="form-control" autocomplete="off" name="first-name" id="cont-fname" [(ngModel)]="contactFname">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="name">Last Name:</label>
+			    <input type="name" class="form-control" autocomplete="off" name="last-name" id="cont-lname" [(ngModel)]="contactLname">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="number">Contact Number:</label>
+			    <input type="number" class="form-control" autocomplete="off" id="cont-number" [placeholder]="numberPlaceholder">
+			  </div>
+			  <button type="submit" class="btn btn-success" (click)="addContact()">{{btnTxt}}</button>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<table class="table">
+			    <thead>
+			      <tr>
+			        <th>Firstname</th>
+			        <th>Lastname</th>
+			        <th>Contact Number</th>
+			      </tr>
+			    </thead>
+			    <tbody *ngFor="let contact of contacts" >
+			      <tr>
+			        <td>{{contact}}</td>
+			        <td>Doe</td>
+			        <td>john@example.com</td>
+			      </tr>
+			    </tbody>
+			</table>
+		</div>
+	</div>
+	
+</div>
